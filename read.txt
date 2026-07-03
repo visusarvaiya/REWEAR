@@ -1,0 +1,45 @@
+express → Web server
+mongoose → MongoDB connection and models
+dotenv → Environment variables
+method-override → Support for PUT and DELETE requests
+nodemon → Automatically restarts the server during development
+
+
+
+        USER
+          │
+          ▼
+HTML Form (public)
+          │
+          ▼
+fetch()
+          │
+          ▼
+app.js
+          │
+          ▼
+Routes
+          │
+          ▼
+Controller
+          │
+          ▼
+Model
+          │
+          ▼
+MongoDB Atlas
+          │
+          ▲
+      Saved Data
+          │
+          ▲
+Controller
+          │
+          ▲
+Response
+          │
+          ▲
+Frontend
+          │
+          ▲
+User sees success

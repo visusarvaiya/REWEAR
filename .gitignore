@@ -1,0 +1,5 @@
+.env
+.history/
+.lh/
+node_modules/
+*.log
