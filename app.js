@@ -2,12 +2,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
 // Import database connection
 const connectDB = require("./config/db");
 
 // Import routes
 const itemRoutes = require("./routes/itemRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 // Load environment variables
 dotenv.config();
@@ -20,6 +22,7 @@ const app = express();
 
 // Middleware to parse JSON data
 app.use(express.json());
+app.use(cookieParser());
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
@@ -28,6 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // API Routes
+app.use("/api/auth", authRoutes);
 app.use("/api/items", itemRoutes);
 
 // Home Route

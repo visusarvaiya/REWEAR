@@ -43,3 +43,18 @@ Frontend
           │
           ▲
 User sees success
+
+
+
+Email + Password = Buying the ticket
+JWT Token = Wristband
+Server = Theater staff
+--------------------------------------------------
+The JWT_SECRET acts like a secret signature.
+
+If someone changes the token, the signature won't match.
+-------------------------------------------------------------
+The same token is reused until it expires or the user logs out.
+The server looks at the token instead of asking for the password again.
+---------------------------------------------------------------------------
+"We use JWT (JSON Web Token) to identify authenticated users without requiring them to send their email and password on every request. After a successful login, the server generates a signed token containing the user's ID. The client sends this token with future requests, and the server verifies it before allowing access to protected resources." here client means brower send token on every req like add item 
