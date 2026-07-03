@@ -133,9 +133,17 @@ const logout = (req, res) => {
 
 };
 
+// ==================== GET CURRENT USER ====================
+const getCurrentUser = async (req, res) => {
+  res.json({
+    user: req.user,
+  });
+};
+
 // Export controller functions
 module.exports = {
   signup,
   login,
   logout,
+  getCurrentUser
 };

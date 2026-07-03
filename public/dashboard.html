@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REWEAR Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>REWEAR</h2>
+
+        <ul>
+
+            <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+
+            <li><a href="#"><i class="fas fa-shirt"></i> My Items</a></li>
+
+            <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>
+
+            <li><a href="#"><i class="fas fa-right-left"></i> Exchange</a></li>
+
+            <li><a href="#"><i class="fas fa-comments"></i> Messages</a></li>
+
+            <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main">
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <div>
+
+                <h1 id="welcome">Welcome 👋</h1>
+
+                <p>Manage your clothes and swaps.</p>
+
+            </div>
+
+            <button id="logoutBtn">
+
+                Logout
+
+            </button>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+            <div class="card">
+
+                <i class="fas fa-shirt"></i>
+
+                <h3>My Items</h3>
+
+                <p id="itemsCount">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-right-left"></i>
+
+                <h3>Pending Swaps</h3>
+
+                <p>0</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-heart"></i>
+
+                <h3>Wishlist</h3>
+
+                <p>0</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-star"></i>
+
+                <h3>Rating</h3>
+
+                <p>5.0 ⭐</p>
+
+            </div>
+
+        </div>
+
+        <!-- My Items -->
+
+        <div class="items-section">
+
+            <div class="title">
+
+                <h2>My Listed Items</h2>
+
+                <button onclick="location.href='add-item.html'">
+
+                    + Add Item
+
+                </button>
+
+            </div>
+
+            <div id="itemsContainer" class="items-grid">
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
